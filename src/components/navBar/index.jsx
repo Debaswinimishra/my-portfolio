@@ -1,6 +1,7 @@
-import React from "react";
-import { FaReact } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaBars, FaReact } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { HiX } from "react-icons/hi";
 
 const data = [
   {
@@ -30,6 +31,10 @@ const data = [
 ];
 
 const Navbar = () => {
+  const [toggleIcon, setToggleIcon] = useState(false);
+  const handleToggleIcon = () => {
+    setToggleIcon(!toggleIcon);
+  };
   return (
     <div>
       <nav className="navbar">
@@ -50,6 +55,9 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <div className="nav-icon" onClick={handleToggleIcon}>
+          {toggleIcon ? <HiX size={30} /> : <FaBars size={30} />}
+        </div>
       </nav>
     </div>
   );
