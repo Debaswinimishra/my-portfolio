@@ -1,0 +1,24 @@
+:root {
+  --yellow-theme-background-color: "#1b1b1b";
+  --yellow-theme-main-color: "yellow";
+  --yellow-theme-sub-text-color: "white";
+  --yellow-theme-nav-background-color: "white";
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+body {
+  background: #1b1b1b;
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
