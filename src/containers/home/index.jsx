@@ -1,7 +1,7 @@
 import React from "react";
 
 const Home = () => {
-  return <div>Home page</div>;
+  return <h1 style={{ color: "gold" }}>Home page</h1>;
 };
 
 export default Home;

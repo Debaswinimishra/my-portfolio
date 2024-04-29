@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaReact } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HiX } from "react-icons/hi";
+import "../navBar/styles.scss";
 
 const data = [
   {
@@ -49,6 +50,7 @@ const Navbar = () => {
               <Link
                 className="navbar__container__menu__item__links"
                 to={item.to}
+                style={{ color: "yellow" }}
               >
                 {item.label}
               </Link>
