@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaBars, FaReact } from "react-icons/fa";
+import { FaBars, FaReact } from "react-icons/fa"; // Import FaBars icon
 import { Link } from "react-router-dom";
 import { HiX } from "react-icons/hi";
 import "../navBar/styles.scss";
@@ -36,6 +36,7 @@ const Navbar = () => {
   const handleToggleIcon = () => {
     setToggleIcon(!toggleIcon);
   };
+
   return (
     <div>
       <nav className="navbar">
@@ -44,7 +45,7 @@ const Navbar = () => {
             <FaReact size={30} />
           </Link>
         </div>
-        <ul className="navbar__container__menu">
+        <ul className={`navbar__container__menu ${toggleIcon ? "active" : ""}`}>
           {data.map((item, key) => (
             <li key={key} className="navbar__container__menu__item">
               <Link
@@ -57,8 +58,17 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="nav-icon" onClick={handleToggleIcon}>
-          {toggleIcon ? <HiX size={30} /> : <FaBars size={30} />}
+        <div
+          style={{
+            display: "block",
+            cursor: "pointer",
+            color: "yellow",
+            paddingRight: "20px",
+          }}
+          onClick={handleToggleIcon}
+        >
+          {/* Render FaBars when toggleIcon is false */}
+          {!toggleIcon ? <FaBars size={30} /> : <HiX size={30} />}
         </div>
       </nav>
     </div>
