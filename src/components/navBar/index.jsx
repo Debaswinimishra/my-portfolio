@@ -62,7 +62,7 @@ const Navbar = () => {
           style={{
             display: "block",
             cursor: "pointer",
-            color: "yellow",
+            color: "gold",
             paddingRight: "20px",
           }}
           onClick={handleToggleIcon}
